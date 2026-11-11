@@ -62,6 +62,8 @@ class SettingsScreen extends StatelessWidget {
             ],
           ),
           const UiGap(UiSpace.lg),
+          const UiAppearanceSection(),
+          const UiGap(UiSpace.lg),
           UiUpdateSection(storeId: 'panchang', header: m.t('Updates', 'अपडेट')),
           const UiGap(UiSpace.lg),
           UiDeveloperSection(header: m.t('Developer', 'डेवलपर')),

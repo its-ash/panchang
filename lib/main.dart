@@ -21,7 +21,6 @@ class PanchangApp extends StatelessWidget {
       model: model,
       child: UiApp(
         title: 'Panchang',
-        themeMode: ThemeMode.system,
         accent: const Color(0xFFE8590C), // saffron
         home: const HomeScreen(),
       ),
