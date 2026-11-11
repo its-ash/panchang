@@ -1,0 +1,11 @@
+{
+  "id": "panchang",
+  "name": "Panchang",
+  "repo": "its-ash/panchang",
+  "package": "com.itsash.panchang",
+  "tagline": "Daily Hindu panchang for your city: tithi, nakshatra, muhurat and a monthly calendar, offline.",
+  "description": "Panchang shows the Hindu almanac for any date and city: vaar, tithi with its end time, nakshatra, yoga, karana, sunrise, sunset, moonrise, moonset, moon sign, Hindu month (amanta or purnimanta), Vikram and Shaka samvat, ritu and ayana. It lists Rahu Kaal, Yamaganda, Gulika Kaal, Abhijit, Brahma Muhurat, Dur Muhurat and the day and night choghadiya, with the current one highlighted, and a month calendar that marks Purnima, Amavasya and Ekadashi. Everything is calculated on your phone with no internet. Choose a city from the built-in list or let GPS pick the nearest one. English and Hindi.",
+  "category": "Lifestyle",
+  "icon": "assets/icon/logo-1024.png",
+  "homepage": "https://panchang.itsash.in/"
+}
