@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_bg"
+    android:orientation="vertical"
+    android:padding="14dp">
+
+    <TextView
+        android:id="@+id/widget_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="@color/widget_accent"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/widget_place"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="@color/widget_muted"
+        android:textSize="11sp" />
+
+    <LinearLayout style="@style/WidgetRow">
+        <TextView android:id="@+id/row1_label" style="@style/WidgetLabel" />
+        <TextView android:id="@+id/row1_value" style="@style/WidgetValue" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/WidgetRow">
+        <TextView android:id="@+id/row2_label" style="@style/WidgetLabel" />
+        <TextView android:id="@+id/row2_value" style="@style/WidgetValue" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/WidgetRow">
+        <TextView android:id="@+id/row3_label" style="@style/WidgetLabel" />
+        <TextView android:id="@+id/row3_value" style="@style/WidgetValue" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/WidgetRow">
+        <TextView android:id="@+id/row4_label" style="@style/WidgetLabel" />
+        <TextView android:id="@+id/row4_value" style="@style/WidgetValue" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/WidgetRow">
+        <TextView android:id="@+id/row5_label" style="@style/WidgetLabel" />
+        <TextView android:id="@+id/row5_value" style="@style/WidgetValue" />
+    </LinearLayout>
+</LinearLayout>

@@ -60,6 +60,14 @@ uses 212 m for Delhi; effect under a minute).
   sunrise per day), `muhurat_page.dart`, `location_screen.dart` (search + GPS
   once via geolocator), `settings_screen.dart` (ends with `UiUpdateSection`
   then `UiDeveloperSection`), `format.dart`.
+- Home-screen widget (4x2, today's tithi / nakshatra / sunrise / sunset /
+  Rahu Kaal): `lib/app/widget_sync.dart` computes the next 30 days in Dart
+  (app start + place/language/month-system change) and sends one JSON string
+  over MethodChannel `com.itsash.panchang/widget` to `MainActivity.kt`, which
+  saves it in SharedPreferences and refreshes `PanchangWidget.kt` (picks
+  today's entry by local date, else "Open Panchang to update";
+  `updatePeriodMillis` 30 min). Layout `res/layout/widget_panchang.xml`,
+  colors in `res/values{,-night}/colors.xml`.
 - Tests: `test/engine_test.dart` (reference values), `calendar_test.dart`
   (muhurat, months, samvat, time zones), `app_test.dart` (city list, settings,
   widget smoke test).

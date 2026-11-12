@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Home-screen widget palette (light). values-night/colors.xml has the dark one. Accent = app saffron. -->
+<resources>
+    <color name="widget_bg">#FFFFFFFF</color>
+    <color name="widget_text">#FF0F172A</color>
+    <color name="widget_muted">#FF64748B</color>
+    <color name="widget_accent">#FFE8590C</color>
+</resources>

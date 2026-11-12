@@ -12,6 +12,8 @@ Daily Hindu panchang for your city: tithi, nakshatra, muhurat and a monthly cale
 - **Sun and Moon**: sunrise, sunset, moonrise and moonset for your city.
 - **Muhurat**: Rahu Kaal, Yamaganda, Gulika Kaal, Abhijit, Brahma Muhurat,
   Dur Muhurat, and the day and night choghadiya with the current one marked.
+- **Home-screen widget**: today's tithi, nakshatra, sunrise, sunset and Rahu
+  Kaal at a glance; tap to open the app.
 - **Month calendar** with the tithi of every day and Purnima, Amavasya and
   Ekadashi marked. Swipe between months, tap a day for its details.
 - **Your city**: pick from a built-in list of about 340 cities (with summer

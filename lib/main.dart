@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:theme/theme.dart';
 
 import 'app/app_model.dart';
+import 'app/widget_sync.dart';
 import 'ui/home_screen.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   final model = await AppModel.load();
+  WidgetSync(model).push();
   runApp(PanchangApp(model: model));
 }
 
