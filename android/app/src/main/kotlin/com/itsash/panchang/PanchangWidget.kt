@@ -9,6 +9,7 @@ import android.content.Intent
 import android.widget.RemoteViews
 import org.json.JSONObject
 import java.util.Calendar
+import java.util.Locale
 
 /**
  * Home-screen widget: today's panchang. The data (next ~30 days, computed by the Dart engine) is
@@ -42,7 +43,7 @@ class PanchangWidget : AppWidgetProvider() {
 
         private fun todayKey(): String {
             val c = Calendar.getInstance()
-            return "%04d-%02d-%02d".format(c.get(Calendar.YEAR), c.get(Calendar.MONTH) + 1, c.get(Calendar.DAY_OF_MONTH))
+            return String.format(Locale.US, "%04d-%02d-%02d", c.get(Calendar.YEAR), c.get(Calendar.MONTH) + 1, c.get(Calendar.DAY_OF_MONTH))
         }
 
         private fun build(context: Context): RemoteViews {

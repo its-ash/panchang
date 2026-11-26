@@ -138,11 +138,19 @@ class DateBar extends StatelessWidget {
               child: InkWell(
                 borderRadius: UiRadius.all(UiRadius.md),
                 onTap: () async {
+                  final firstDate = DateTime(1950);
+                  final lastDate = DateTime(2100, 12, 31);
+                  final current = DateTime(m.date.year, m.date.month, m.date.day);
+                  final initialDate = current.isBefore(firstDate)
+                      ? firstDate
+                      : current.isAfter(lastDate)
+                          ? lastDate
+                          : current;
                   final picked = await showDatePicker(
                     context: context,
-                    initialDate: m.date,
-                    firstDate: DateTime(1950),
-                    lastDate: DateTime(2100),
+                    initialDate: initialDate,
+                    firstDate: firstDate,
+                    lastDate: lastDate,
                   );
                   if (picked != null) m.date = picked;
                 },
@@ -165,18 +173,20 @@ class DateBar extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            InkWell(
-              borderRadius: UiRadius.all(UiRadius.full),
-              onTap: () => Navigator.of(context).push(MaterialPageRoute<void>(builder: (_) => const LocationScreen())),
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: UiSpace.md, vertical: UiSpace.xs),
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Icon(Icons.place_rounded, size: 16, color: c.accent),
-                    const UiGap(UiSpace.xs),
-                    Flexible(child: Text(m.place.label, style: context.text.labelLarge?.copyWith(color: c.accent), overflow: TextOverflow.ellipsis)),
-                  ],
+            Flexible(
+              child: InkWell(
+                borderRadius: UiRadius.all(UiRadius.full),
+                onTap: () => Navigator.of(context).push(MaterialPageRoute<void>(builder: (_) => const LocationScreen())),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: UiSpace.md, vertical: UiSpace.xs),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Icon(Icons.place_rounded, size: 16, color: c.accent),
+                      const UiGap(UiSpace.xs),
+                      Flexible(child: Text(m.place.label, style: context.text.labelLarge?.copyWith(color: c.accent), overflow: TextOverflow.ellipsis)),
+                    ],
+                  ),
                 ),
               ),
             ),

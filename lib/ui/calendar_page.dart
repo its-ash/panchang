@@ -41,7 +41,7 @@ class _CalendarPageState extends State<CalendarPage> {
   void initState() {
     super.initState();
     final d = DateTime.now();
-    _page = _pageOf(d.year, d.month);
+    _page = _pageOf(d.year, d.month).clamp(0, _monthCount - 1);
     _controller = PageController(initialPage: _page);
   }
 
@@ -71,7 +71,7 @@ class _CalendarPageState extends State<CalendarPage> {
   Widget build(BuildContext context) {
     final m = AppScope.of(context);
     // Follow the selected date when it moves to another month elsewhere.
-    final target = _pageOf(m.date.year, m.date.month);
+    final target = _pageOf(m.date.year, m.date.month).clamp(0, _monthCount - 1);
     if (target != _modelPage) {
       _modelPage = target;
       if (target != _page) {
