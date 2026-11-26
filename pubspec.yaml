@@ -1,7 +1,7 @@
 name: panchang
 description: "Panchang: offline daily Hindu almanac for your city."
 publish_to: 'none'
-version: 1.0.5+6
+version: 1.0.6+7
 
 environment:
   sdk: ^3.12.2
